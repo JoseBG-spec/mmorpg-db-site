@@ -6,8 +6,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box, { BoxProps } from '@mui/material/Box';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
 import axios from "axios";
 import { yellow, red } from '@mui/material/colors';
 
@@ -43,6 +41,7 @@ export default function TitlebarBelowImageList() {
         genre : game.genre ? game.genre : "",
         platform : game.platform ? game.platform : "",
         id : game.id ? game.id : 0,
+        game_url : game.game_url ? game.game_url : "",
         releaseDate	: game.release_date ? game.release_date : ""})
     });
     //console.log(gamesListInfo)
@@ -74,8 +73,11 @@ export default function TitlebarBelowImageList() {
           <Button size="small" variant='outlined' style={{color:yellow[600],borderColor: yellow[600]}}>{game.platform}</Button>
           <Button size="small" variant='outlined' style={{color:yellow[600],borderColor: yellow[600]}}>{game.genre}</Button>
           <CardActions>
-            <Button size="small" variant='outlined' style={{color:red[600],borderColor: red[600]}}>Share</Button>
-            <Button size="small" variant='outlined' style={{color:red[600],borderColor: red[600]}}>Learn More</Button>
+
+            <Button 
+            size="small" variant='outlined' 
+            style={{color:red[600],borderColor: red[600]}}
+            ><a style={{color:red[600]}} href={game.game_url}>Learn More</a></Button>
           </CardActions>
         </Card>
       ))}
