@@ -26,7 +26,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' , width: '80%'}}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" color='secondary'>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -41,7 +41,7 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Gaming News Page
+            MMORPGs DB
           </Typography>
         </Toolbar>
       </AppBar>
