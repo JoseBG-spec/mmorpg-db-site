@@ -33,7 +33,7 @@ export default function TitlebarBelowImageList() {
   function AddGames(info){
     var gamesList = []
     info.map(game => {
-      console.log(game)
+      //console.log(game)
       gamesList.push({
         imageSrc: game.thumbnail ? game.thumbnail : "",
         title: game.title ? game.title : "",
